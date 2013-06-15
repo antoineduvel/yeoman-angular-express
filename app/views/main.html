@@ -1,0 +1,18 @@
+<div class="hero-unit">
+    <h1>Saisissez un nouvel élément</h1>
+    <br/>
+
+    <div>
+        <form name="siteForm">
+            <input type="text" ng-model="site.link" autofocus required/>
+            <br/>
+            <input type="text" ng-model="site.desc" required/>
+            <br/>
+            <button ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">submit</button>
+        </form>
+    </div>
+    <ul>
+        <li ng-repeat="site in sitesFromServer">{{site.link}} - {{site.title}} - {{site.desc}}</li>
+    </ul>
+
+</div>
