@@ -13,8 +13,8 @@ angular.module('yoaeApp')
                 $http.get('/sites').success(function (resp) {
                     $scope.sitesFromServer = resp;
                 });
-                //$scope.site.link = "";
-                //$scope.site.desc = "";
+                $scope.site.link = "";
+                $scope.site.desc = "";
             });
         }
 
