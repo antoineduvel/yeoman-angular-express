@@ -3,22 +3,27 @@
 angular.module('yoaeApp')
     .controller('MainCtrl', function ($scope, $timeout, $http) {
 
-        var countUp = function () {
+        var getFromServer = function () {
             $http.get('/sites').success(function (resp) {
                 $scope.sitesFromServer = resp;
                 $scope.$apply();
-                //TODO conditionner le timeout au fait qu'il y a des infos en attente
-                $timeout(countUp, 5000);
+
+                for (var i = 0 ; i < $scope.sitesFromServer.length ; i++) {
+                    if ($scope.sitesFromServer[i].enCours) {
+                        $timeout(getFromServer, 5000);
+                        break;
+                    }
+                }
+
+
             });
         };
 
-        countUp();
+        getFromServer();
 
         $scope.submitSite = function (site) {
             $http.post('/create', site).success(function () {
-                $http.get('/sites').success(function (resp) {
-                    $scope.sitesFromServer = resp;
-                });
+                getFromServer();
                 $scope.site.link = "";
                 $scope.site.desc = "";
             });

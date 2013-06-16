@@ -25,16 +25,16 @@ var SiteRoutes = function () {
                 if (title.length > 0) title = title[0].children[0].data; else title = null;
                 if (null != title) {
                     console.log("title : ", title);
-                    console.log("TODO : mettre à jour sites[" + (a - 1) + "]");
                     if (sites.length >= a) {
                         var site = null;
                         site = sites[a - 1];
                         site.title = title;
                         sites[a - 1] = site;
                         console.log("site : ", site);
-
                     }
-
+                }
+                if (sites.length >= a) {
+                    sites[a - 1].enCours = false;
                 }
             });
         }
@@ -50,11 +50,14 @@ var SiteRoutes = function () {
             path: "/"
         };
 
-        newSite.title = "inconnu. en cours de recherche ...";
+        newSite.title = "Non trouvé ...";
+        newSite.enCours = true;
         sites.push(newSite);
 
         http.request(options, callbackSite(sites.length)).on('error',function (e) {
             console.log('problem with request: ' + e.message);
+            sites[sites.length-1].title = "problème d'accès à ce site !!!" ;
+            sites[sites.length-1].enCours = false;
         }).end();
 
 
