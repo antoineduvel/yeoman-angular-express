@@ -11,8 +11,19 @@
             <button ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">submit</button>
         </form>
     </div>
-    <ul>
-        <li ng-repeat="site in sitesFromServer">{{site.link}} - {{site.title}} - {{site.desc}}</li>
-    </ul>
+    <table width="100%" border="1">
+        <tr>
+            <th>lien</th>
+            <th>titre</th>
+            <th>commentaire</th>
+        </tr>
+        <tr ng-repeat="site in sitesFromServer | orderBy:'title':'true'">
+            <td>{{site.link}}</td>
+            <td ng-hide="!site.enCours">... En Cours ...</td>
+            <td ng-hide="site.enCours">{{site.title}}</td>
+            </td>
+            <td>{{site.desc}}</td>
+        </tr>
+    </table>
 
 </div>
