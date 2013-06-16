@@ -1,3 +1,7 @@
+<header class="page-header">
+    <h1>Mes sites internet</h1>
+</header>
+
 <div class="hero-unit">
     <h1>Saisissez un nouvel élément</h1>
     <br/>
@@ -8,7 +12,7 @@
             <br/>
             <input type="text" ng-model="site.desc" required/>
             <br/>
-            <button ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">submit</button>
+            <button class="btn btn-success" ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">envoyer</button>
         </form>
     </div>
     <table width="100%" border="1">
