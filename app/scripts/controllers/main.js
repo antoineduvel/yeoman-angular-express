@@ -1,12 +1,18 @@
 'use strict';
 
 angular.module('yoaeApp')
-    .controller('MainCtrl', function ($scope, $http) {
+    .controller('MainCtrl', function ($scope, $timeout, $http) {
 
-        $http.get('/sites').success(function (resp) {
-            $scope.sitesFromServer = resp;
-        });
+        var countUp = function () {
+            $http.get('/sites').success(function (resp) {
+                $scope.sitesFromServer = resp;
+                $scope.$apply();
+                //TODO conditionner le timeout au fait qu'il y a des infos en attente
+                $timeout(countUp, 5000);
+            });
+        };
 
+        countUp();
 
         $scope.submitSite = function (site) {
             $http.post('/create', site).success(function () {

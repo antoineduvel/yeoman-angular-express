@@ -1,77 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" name="Default" comment="First commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.buildignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_accordion.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_alerts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_breadcrumbs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_button-groups.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_buttons.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_carousel.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_close.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_code.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_compass_twitter_bootstrap.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_compass_twitter_bootstrap_awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/_compass_twitter_bootstrap_responsive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_component-animations.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_dropdowns.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_font-awesome.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_forms.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_grid.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_hero-unit.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_labels-badges.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_layouts.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_media.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_modals.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_navs.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_pager.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_pagination.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_popovers.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_progress-bars.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_reset.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive-1200px-min.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive-767px-max.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive-768px-979px.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive-navbar.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive-utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_responsive.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_scaffolding.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_sprites.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_tables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_thumbnails.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_tooltip.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_type.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_utilities.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_wells.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma-e2e.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/spec/controllers/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/styles/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/robots.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/runner.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/routes/siteRoutes.js" />
+    <list default="true" id="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="yoae.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,8 +12,8 @@
     <file path="/app.js" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371296212199" ignored="false" />
     <file path="/siteRoutes.js" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371336360810" ignored="false" />
     <file path="/main.html" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371335760386" ignored="false" />
-    <file path="/main.js" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371298183605" ignored="false" />
-    <file path="/Dummy.txt" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371338122037" ignored="false" />
+    <file path="/main.js" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371383855314" ignored="false" />
+    <file path="/Dummy.txt" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371372811789" ignored="false" />
     <file path="/package.json" changelist="bda38a4f-45f9-4ecc-a2ef-5d6ddaf852ac" time="1371300276802" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,19 +43,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="siteRoutes.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="siteRoutes.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/routes/siteRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.11904762">
+            <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="51" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
+            <state line="10" column="85" selection-start="373" selection-end="373" vertical-scroll-proportion="0.30526316">
               <folding />
             </state>
           </provider>
@@ -132,7 +64,7 @@
       <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="-0.625">
+            <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -141,7 +73,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="21" selection-start="324" selection-end="324" vertical-scroll-proportion="2.25">
+            <state line="11" column="21" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1371337083000" expanded="true" signature="749:986" placeholder="..." />
                 <marker date="1371337083000" expanded="true" signature="818:852" placeholder="..." />
@@ -153,7 +85,7 @@
       <file leaf-file-name="_font-awesome.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_font-awesome.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="304" column="0" selection-start="6196" selection-end="6196" vertical-scroll-proportion="2.2">
+            <state line="304" column="0" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,12 +101,15 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Antoine DUVEL &lt;antoineduvel..." />
+        <option value="Antoine DUVEL &lt;antoineduvel@gmail.com&gt;" />
         <option value="Antoine DUVEL antoineduvel@gmail.com" />
         <option value="antoineduvel antoineduvel@gmail.com" />
         <option value="antoineduvel antoineduvel@g..." />
         <option value="antoineduvel@gmail.com" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="REBASE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitLogSettings">
@@ -245,24 +180,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoae" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yoae" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="routes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -271,13 +188,13 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="web-ide.project.structure" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Node.js.yoae-app">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
@@ -336,6 +253,11 @@
       <created>1371257668770</created>
       <updated>1371257668770</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1371338579122</created>
+      <updated>1371338579122</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -360,22 +282,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24986821" sideWeight="0.51221997" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986821" sideWeight="0.6700611" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986821" sideWeight="0.51221997" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48778003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.48778003" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3299389" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -482,28 +404,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="29" selection-start="182" selection-end="190" vertical-scroll-proportion="0.22105263">
-          <folding />
-        </state>
+        <state line="7" column="29" selection-start="182" selection-end="190" vertical-scroll-proportion="0.22105263" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/compass_twitter_bootstrap/_font-awesome.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="304" column="0" selection-start="6196" selection-end="6196" vertical-scroll-proportion="2.2">
+        <state line="304" column="0" selection-start="6196" selection-end="6196" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -515,23 +431,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="51" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="21" selection-start="324" selection-end="324" vertical-scroll-proportion="2.25">
+        <state line="11" column="21" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1371337083000" expanded="true" signature="749:986" placeholder="..." />
             <marker date="1371337083000" expanded="true" signature="818:852" placeholder="..." />
@@ -541,7 +443,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/siteRoutes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.11904762">
+        <state line="5" column="13" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="13" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="85" selection-start="373" selection-end="373" vertical-scroll-proportion="0.30526316">
           <folding />
         </state>
       </provider>
