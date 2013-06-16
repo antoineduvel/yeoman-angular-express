@@ -1,0 +1,18 @@
+Base mongo
+
+notation (stars)
+rendre optionel le commentaire
+
+Possibilité de supprimer
+Possibilité de modifier
+
+Site déjà présent ?
+    + 1
+    moyenne des stars
+    ajout des commentaires
+
+Pagination client/server
+
+Tri sur les colonnes
+
+login gmail
