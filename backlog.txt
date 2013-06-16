@@ -1,7 +1,13 @@
-Base mongo
+Github
 
+vérifier les 301 Moved Permanently -> rediriger ?
+imposer une regex à la saisie du site
 notation (stars)
 rendre optionel le commentaire
+
+Tri sur les colonnes
+
+Base mongo
 
 Possibilité de supprimer
 Possibilité de modifier
@@ -12,7 +18,5 @@ Site déjà présent ?
     ajout des commentaires
 
 Pagination client/server
-
-Tri sur les colonnes
 
 login gmail
