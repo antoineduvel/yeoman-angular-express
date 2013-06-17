@@ -24,8 +24,8 @@ angular.module('yoaeApp')
         $scope.submitSite = function (site) {
             $http.post('/create', site).success(function () {
                 getFromServer();
-                $scope.site.link = "";
-                $scope.site.desc = "";
+                $scope.site.lien = "";
+                $scope.site.commentaire = "";
             });
         }
 

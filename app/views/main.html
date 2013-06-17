@@ -8,9 +8,9 @@
 
     <div>
         <form name="siteForm">
-            <input type="text" ng-model="site.link" autofocus required/>
+            Lien web : <input type="text" ng-model="site.lien" ng-pattern="/^(www.)?(([a-z0-9-]){2,}\.){1,4}([a-z]){2,6}$/" autofocus required/>
             <br/>
-            <input type="text" ng-model="site.desc" required/>
+            Commentaire : <input type="text" ng-model="site.commentaire" />
             <br/>
             <button class="btn btn-success" ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">envoyer</button>
         </form>
@@ -21,12 +21,12 @@
             <th>titre</th>
             <th>commentaire</th>
         </tr>
-        <tr ng-repeat="site in sitesFromServer | orderBy:'title':'true'">
-            <td>{{site.link}}</td>
+        <tr ng-repeat="site in sitesFromServer | orderBy:'titre':'true'">
+            <td>{{site.lien}}</td>
             <td ng-hide="!site.enCours">... En Cours ...</td>
-            <td ng-hide="site.enCours">{{site.title}}</td>
+            <td ng-hide="site.enCours">{{site.titre}}</td>
             </td>
-            <td>{{site.desc}}</td>
+            <td>{{site.commentaire}}</td>
         </tr>
     </table>
 

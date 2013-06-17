@@ -1,22 +1,24 @@
-Github
-
 vérifier les 301 Moved Permanently -> rediriger ?
-imposer une regex à la saisie du site
 notation (stars)
-rendre optionel le commentaire
-
 Tri sur les colonnes
 
-Base mongo
 
+Base mongo
 Possibilité de supprimer
 Possibilité de modifier
-
 Site déjà présent ?
     + 1
     moyenne des stars
     ajout des commentaires
 
+
 Pagination client/server
 
+
 login gmail
+
+
+
+Github : DONE
+imposer une regex à la saisie du site : DONE
+rendre optionel le commentaire : DONE

@@ -28,7 +28,7 @@ var SiteRoutes = function () {
                     if (sites.length >= a) {
                         var site = null;
                         site = sites[a - 1];
-                        site.title = title;
+                        site.titre = title;
                         sites[a - 1] = site;
                         console.log("site : ", site);
                     }
@@ -46,17 +46,17 @@ var SiteRoutes = function () {
         var newSite = req.body;
 
         var options = {
-            host: newSite.link,
+            host: newSite.lien,
             path: "/"
         };
 
-        newSite.title = "Non trouvé ...";
+        newSite.titre = "Non trouvé ...";
         newSite.enCours = true;
         sites.push(newSite);
 
         http.request(options, callbackSite(sites.length)).on('error',function (e) {
             console.log('problem with request: ' + e.message);
-            sites[sites.length-1].title = "problème d'accès à ce site !!!" ;
+            sites[sites.length-1].titre = "problème d'accès à ce site !!!" ;
             sites[sites.length-1].enCours = false;
         }).end();
 
