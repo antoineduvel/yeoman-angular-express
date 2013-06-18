@@ -30,11 +30,13 @@ var SiteRoutes = function () {
                         site = sites[a - 1];
                         site.titre = title;
                         sites[a - 1] = site;
-                        console.log("site : ", site);
                     }
                 }
                 if (sites.length >= a) {
-                    sites[a - 1].enCours = false;
+                    if (sites[a - 1].enCours) {
+                        sites[a - 1].enCours = false;
+                        console.log("site : ", site);
+                    }
                 }
             });
         }
