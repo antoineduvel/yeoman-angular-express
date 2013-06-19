@@ -35,7 +35,7 @@ var SiteRoutes = function () {
                 if (sites.length >= a) {
                     if (sites[a - 1].enCours) {
                         sites[a - 1].enCours = false;
-                        console.log("site : ", site);
+
                     }
                 }
             });
