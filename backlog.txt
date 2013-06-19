@@ -3,13 +3,15 @@ notation (stars)
 Tri sur les colonnes
 
 
-Base mongo
+Base mongo ou elastic search
 Possibilité de supprimer
 Possibilité de modifier
 Site déjà présent ?
     + 1
     moyenne des stars
     ajout des commentaires
+
+heroku deployement
 
 
 Pagination client/server
