@@ -12,7 +12,7 @@ launch grunt services (see Gruntfile.js for more details) : grunt server
 
 
 # Server side :
-launch jasmine tests (/spec) : jasmine-node spec
+launch jasmine tests (/spec) : jasmine-node test/spec
 
 # Mongo DB :
 install mongodb with brew :

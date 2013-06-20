@@ -1,4 +1,4 @@
-var SiteRoutes = require('../../server/routes/siteRoutes');
+var SiteRoutes = require('../../../../server/routes/siteRoutes');
 
 var routes
 
