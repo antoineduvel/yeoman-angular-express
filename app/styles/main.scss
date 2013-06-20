@@ -1,1 +1,14 @@
 @import "compass_twitter_bootstrap";
+@import "compass/css3";
+@import "compass/utilities";
+
+#demo {
+  @include clearfix; }
+
+.border-radius-table {
+  background: #4ab0ce;
+  margin: 20px;
+}
+
+#border-radius {
+  @include border-radius(25px); }
