@@ -21,6 +21,6 @@ install mongodb with brew :
 
 start mongodb : ./mongod
 
-stop mongod : use use console admin : mongo
+stop mongod : use console admin : mongo
 - use admin
 - db.shutdownServer()
