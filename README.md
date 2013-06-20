@@ -13,3 +13,14 @@ launch grunt services (see Gruntfile.js for more details) : grunt server
 
 # Server side :
 launch jasmine tests (/spec) : jasmine-node spec
+
+# Mongo DB
+install mongodb with brew :
+- brew update
+- brew install mongodb
+
+start mongodb : ./mongod
+
+stop mongod : use use console admin : mongo
+- use admin
+- db.shutdownServer()
