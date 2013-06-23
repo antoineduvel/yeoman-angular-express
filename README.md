@@ -28,6 +28,6 @@ stop mongod : use console admin : mongo
 admin collections : use console admin : mongo
 - show collections
 - db.sites.find()
-- db.sites.remove({"lien" : "www.monsite.fr"})
+- db.sites.remove({"lien" : "leLienASupprimer"})
 - db.sites.drop()
 
