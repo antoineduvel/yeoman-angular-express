@@ -1,12 +1,11 @@
 vérifier les 301 Moved Permanently -> rediriger ?
-notation (stars)
 tag (à la place des commentaires => dynamic search parmi les tags existant à la saisie)
 
 
 Possibilité de modifier (le(s) tag(s) ?)
 Site déjà présent ?
     + 1 : DONE
-    moyenne des stars
+    moyenne des stars : DONE
     ajout des commentaires/tag
 
 heroku deployement
@@ -19,6 +18,7 @@ login gmail
 
 
 
+notation (stars) : DONE
 Possibilité de supprimer : DONE
 Github : DONE
 imposer une regex à la saisie du site : DONE
