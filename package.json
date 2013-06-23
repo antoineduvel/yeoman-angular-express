@@ -4,7 +4,8 @@
     "dependencies": {
         "express": "~3.0.0",
         "ejs": "~0.8.4",
-        "htmlparser2": "latest"
+        "htmlparser2": "latest",
+        "mongoose": "latest"
     },
     "devDependencies": {
         "grunt": "~0.4.1",

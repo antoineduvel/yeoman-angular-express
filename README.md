@@ -24,3 +24,10 @@ start mongodb : ./mongod
 stop mongod : use console admin : mongo
 - use admin
 - db.shutdownServer()
+
+admin collections : use console admin : mongo
+- show collections
+- db.sites.find()
+- db.sites.remove({"lien" : "www.monsite.fr"})
+- db.sites.drop()
+
