@@ -13,7 +13,7 @@ var SiteRoutes = function () {
         htmlparser = require('htmlparser2'),
         domUtils = htmlparser.DomUtils;
 
-    var SitesRepository = require('../core/SitesRepository')
+    var SitesRepository = require('../core/sitesRepository')
 
     var sitesRepository = new SitesRepository('mongodb://localhost:27017/test', 'sites');
     sitesRepository.connect();
@@ -34,17 +34,9 @@ var SiteRoutes = function () {
                 if (enCours == true || null != title) {
                     enCours = false;
                     console.log("récupération du site :")
-                    //TODO Récuperer le site concerné pour le mettre à jour
-                    //TODO mutualiser le code du find. Cf plus bas
-                    sitesRepository.find({ lien: lien }, null, null, function (sites) {
-                        for (var i=0; i<sites.length;i++) {
-                            if (null != title) sites[i].titre = title;
-                            sites[i].enCours = enCours;
-                            console.log(sites[i]);
-                            sites[i].save(function (err) {
-                                if (err) // ...
-                                    console.log('erreur ...');
-                            });
+                    sitesRepository.update(lien, {$set: {titre: title, enCours: enCours} }, function(numberAffected) {
+                        if (numberAffected > 0) {
+                            console.log("site mis à jour.");
                         }
                     })
                 }
@@ -55,6 +47,10 @@ var SiteRoutes = function () {
     var _create = function (req, res) {
         var newSite = req.body;
 
+        newSite.titre = "Non trouvé ...";
+        newSite.enCours = true;
+        newSite.occurances = 1;
+
         sitesRepository.insert(newSite, function(site) {
             var options = {
                 host: newSite.lien,
@@ -63,12 +59,11 @@ var SiteRoutes = function () {
 
             http.request(options, callbackSite(newSite.lien)).on('error',function (e) {
                 console.log('problem with request: ' + e.message);
-                site.titre = "problème d'accès à ce site !!!" ;
-                site.enCours = false;
-                site.save(function (err) {
-                    if (err) // ...
-                        console.log('erreur ...');
-                });
+                sitesRepository.update(site.lien, {$set: {titre: "problème d'accès à ce site !!!", enCours: false} }, function(numberAffected) {
+                    if (numberAffected > 0) {
+                        console.log("site en erreur mis à jour.");
+                    }
+                })
             }).end();
 
 
@@ -84,9 +79,19 @@ var SiteRoutes = function () {
 
     };
 
+    var _delete = function (req, res) {
+        var siteToDelete = req.body;
+
+        sitesRepository.delete(siteToDelete, function() {
+            res.status(201).send();
+        })
+
+    };
+
     return {
         create: _create,
-        getSites: _getSites
+        getSites: _getSites,
+        delete: _delete
     };
 
 };

@@ -33,6 +33,7 @@ app.configure('production', function () {
 var routes = new SiteRoutes();
 
 app.post('/create', routes.create);
+app.post('/delete', routes.delete);
 app.get('/sites', routes.getSites);
 
 

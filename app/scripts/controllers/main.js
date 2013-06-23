@@ -33,4 +33,10 @@ angular.module('yoaeApp')
             });
         }
 
+        $scope.deleteSite = function (site) {
+            $http.post('/delete', site).success(function () {
+                getFromServer();
+            });
+        }
+
     });

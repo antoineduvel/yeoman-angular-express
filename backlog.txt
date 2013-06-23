@@ -3,7 +3,6 @@ notation (stars)
 tag (à la place des commentaires => dynamic search parmi les tags existant à la saisie)
 
 
-Possibilité de supprimer
 Possibilité de modifier (le(s) tag(s) ?)
 Site déjà présent ?
     + 1 : DONE
@@ -20,6 +19,7 @@ login gmail
 
 
 
+Possibilité de supprimer : DONE
 Github : DONE
 imposer une regex à la saisie du site : DONE
 rendre optionel le commentaire : DONE

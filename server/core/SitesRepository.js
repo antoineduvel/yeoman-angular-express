@@ -44,26 +44,22 @@ var SitesRepository = function(dbUrl, collectionName) {
     };
 
     /**
-     * Insert a geek
+     * Insert a site
      * @method insert
      * @param {Object} site - the geek to insert, not checked against a particular schema
      * @param {Function} callback - function to be called with error and success objects in param after the insert
      */
     var _insert = function(site, callback) {
-
-        _find({lien : site.lien}, null, null, function(sites) {
-            if (null != sites && sites.length > 0) {
-                Site.update({lien: site.lien}, {$inc: { occurances: 1 }}, { multi: true }, function (err, numberAffected, raw) {
-                    if (err) return console.log(err);
-                    console.log('The number of updated documents was %d', numberAffected);
-                    console.log('The raw response from Mongo was ', raw);
-                });
-
-                callback(sites[0]);
+        _update(site.lien, {$inc: { occurances: 1 }}, function(numberAffected) {
+            if (numberAffected > 0) {
+                console.log("site mis à jour !");
+                _find({lien : site.lien}, null, null, function(sites) {
+                    if (null != sites && sites.length > 0) {
+                        callback(sites[0]);
+                    }
+                })
             } else {
-                site.titre = "Non trouvé ...";
-                site.enCours = true;
-                site.occurances = 1;
+                console.log("création du site");
 
                 var newDBSite = new Site(site);
 
@@ -75,11 +71,10 @@ var SitesRepository = function(dbUrl, collectionName) {
                 });
             }
         })
-
     };
 
     /**
-     * Find a geek
+     * Find a site
      * @method find
      * @param {Object} query - query to search against
      * @param {Function} callback - function to be called with error and data objects in param after the find
@@ -92,11 +87,54 @@ var SitesRepository = function(dbUrl, collectionName) {
         })
     };
 
+    /**
+     * Update a site
+     * @method update
+     * @param {String} lien - query to search against
+     * @param {Object} update - update to apply (ex: {$inc: { occurances: 1 }})
+     * @param {Function} callback - function to be called with error and data objects in param after the update
+     */
+    var _update = function(lien, update, callback) {
+        Site.update({lien: lien}, update, { multi: true }, function (err, numberAffected, raw) {
+            var numberUpdated = -1
+            if (err) {
+                console.log(err);
+            } else {
+                console.log('The number of updated documents was %d', numberAffected);
+                console.log('The raw response from Mongo was ', raw);
+                numberUpdated = numberAffected;
+            }
+            callback(numberUpdated);
+        });
+    };
+
+    /**
+     * Delete a site
+     * @method delete
+     * @param {String} lien - query to search against
+     * @param {Function} callback - function to be called with error and data objects in param after the delete
+     */
+    var _delete = function(site, callback) {
+        Site.remove({lien: site.lien}, function (err, numberAffected, raw) {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log('The number of updated documents was %d', numberAffected);
+                console.log('The raw response from Mongo was ', raw);
+            }
+            callback();
+        });
+    };
+
+
+
     return {
         connect : _connect,
         close : _close,
         insert : _insert,
-        find : _find
+        find : _find,
+        update: _update,
+        delete: _delete
     };
 };
 

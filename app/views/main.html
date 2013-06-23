@@ -21,14 +21,15 @@
             <th>titre</th>
             <th>commentaire</th>
             <th ng-click="tri = 'occurances'; reverse = !reverse">occurances</th>
+            <th></th>
         </tr>
         <tr ng-repeat="site in sitesFromServer | orderBy:tri:reverse">
             <td>{{site.lien}}</td>
             <td ng-hide="!site.enCours">... En Cours ...</td>
             <td ng-hide="site.enCours">{{site.titre}}</td>
-            </td>
             <td>{{site.commentaire}}</td>
             <td>{{site.occurances}}</td>
+            <td><button class="btn btn-danger" ng-click="deleteSite(site)"><i class="icon-trash icon-white">X</i></button></td>
         </tr>
     </table>
 
