@@ -1,7 +1,7 @@
 yeoman-angular-express
 ======================
 
-angular express sandbox generated wih yeoman (express-angular generator)
+angular express sandbox generated with yeoman (express-angular generator)
 
 # Client side :
 launch grunt services (see Gruntfile.js for more details) : grunt server
