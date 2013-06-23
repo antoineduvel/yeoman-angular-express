@@ -17,16 +17,18 @@
     </div>
     <table width="100%" class='border-radius-table' id='border-radius'>
         <tr>
-            <th>lien</th>
+            <th ng-click="tri = 'lien'; reverse = !reverse">lien</th>
             <th>titre</th>
             <th>commentaire</th>
+            <th ng-click="tri = 'occurances'; reverse = !reverse">occurances</th>
         </tr>
-        <tr ng-repeat="site in sitesFromServer | orderBy:'titre':'true'">
+        <tr ng-repeat="site in sitesFromServer | orderBy:tri:reverse">
             <td>{{site.lien}}</td>
             <td ng-hide="!site.enCours">... En Cours ...</td>
             <td ng-hide="site.enCours">{{site.titre}}</td>
             </td>
             <td>{{site.commentaire}}</td>
+            <td>{{site.occurances}}</td>
         </tr>
     </table>
 

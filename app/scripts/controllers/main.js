@@ -3,6 +3,10 @@
 angular.module('yoaeApp')
     .controller('MainCtrl', function ($scope, $timeout, $http) {
 
+        // valeur initiale des tris
+        $scope.tri = 'occurances';
+        $scope.reverse = 'true';
+
         var getFromServer = function () {
             $http.get('/sites').success(function (resp) {
                 $scope.sitesFromServer = resp;

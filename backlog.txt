@@ -1,15 +1,14 @@
 vérifier les 301 Moved Permanently -> rediriger ?
 notation (stars)
-Tri sur les colonnes
+tag (à la place des commentaires => dynamic search parmi les tags existant à la saisie)
 
 
-Base mongo ou elastic search
 Possibilité de supprimer
-Possibilité de modifier
+Possibilité de modifier (le(s) tag(s) ?)
 Site déjà présent ?
-    + 1
+    + 1 : DONE
     moyenne des stars
-    ajout des commentaires
+    ajout des commentaires/tag
 
 heroku deployement
 
@@ -24,3 +23,6 @@ login gmail
 Github : DONE
 imposer une regex à la saisie du site : DONE
 rendre optionel le commentaire : DONE
+Base mongo ou elastic search : DONE (mongo + mongoose)
+Tri sur les colonnes : DONE
+
