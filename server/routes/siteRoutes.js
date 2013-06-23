@@ -33,49 +33,76 @@ var SiteRoutes = function () {
 
                 if (enCours == true || null != title) {
                     enCours = false;
-                    console.log("récupération du site :")
+                    console.log("récupération du site :");
                     sitesRepository.update(lien, {$set: {titre: title, enCours: enCours} }, function(numberAffected) {
                         if (numberAffected > 0) {
-                            console.log("site mis à jour.");
+                            console.log("site mis à jour avec le titre.");
                         }
-                    })
+                    });
                 }
             });
-        }
+        };
     };
 
     var _create = function (req, res) {
         var newSite = req.body;
 
-        newSite.titre = "Non trouvé ...";
-        newSite.enCours = true;
-        newSite.occurances = 1;
+        sitesRepository.update(newSite.lien, {$inc: { occurances: 1 }}, function(numberAffected) {
+            if (numberAffected > 0) {
+                console.log("site mis à jour !");
+                sitesRepository.find({lien: newSite.lien}, null, null, function (sites) {
+                    for (var i=0; i<sites.length; i++) {
+                        console.log(sites[i].note);
+                        console.log(sites[i].occurances);
+                        console.log(newSite.note);
 
-        sitesRepository.insert(newSite, function(site) {
-            var options = {
-                host: newSite.lien,
-                path: "/"
-            };
+                        var somme = parseFloat(sites[i].note * (sites[i].occurances - 1)) + parseFloat(newSite.note);
+                        var newNote = somme / parseInt(sites[i].occurances);
+                        console.log("newNote :"+ newNote);
 
-            http.request(options, callbackSite(newSite.lien)).on('error',function (e) {
-                console.log('problem with request: ' + e.message);
-                sitesRepository.update(site.lien, {$set: {titre: "problème d'accès à ce site !!!", enCours: false} }, function(numberAffected) {
-                    if (numberAffected > 0) {
-                        console.log("site en erreur mis à jour.");
+                        sitesRepository.update(newSite.lien, {$set: { note: newNote }}, function(numberAffected) {
+                            console.log("note mis à jour :" + newNote);
+                        });
                     }
+                });
+            } else {
+                newSite.titre = "Non trouvé ...";
+                newSite.enCours = true;
+                newSite.occurances = 1;
+
+                sitesRepository.insert(newSite, function(site) {
+                    var options = {
+                        host: newSite.lien,
+                        path: "/"
+                    };
+
+                    var req = http.request(options, callbackSite(newSite.lien));
+
+                    req.on('error',function (e) {
+                        console.log('problem with request: ' + e.message);
+                        sitesRepository.update(site.lien, {$set: {titre: "problème d'accès à ce site !!!", enCours: false} }, function(numberAffected) {
+                            if (numberAffected > 0) {
+                                console.log("site en erreur mis à jour.");
+                            }
+                        });
+                    });
+
+                    req.end();
                 })
-            }).end();
-
-
-            res.status(201).send();
+            }
         })
 
+
+        console.log("res.status = 201");
+        res.status(201).send();
     };
 
     var _getSites = function (req, res) {
         sitesRepository.find(null, null, null, function (sites) {
             res.status(200).send(JSON.stringify(sites));
-        })
+        });
+
+        console.log("end - getSite");
 
     };
 
@@ -84,7 +111,7 @@ var SiteRoutes = function () {
 
         sitesRepository.delete(siteToDelete, function() {
             res.status(201).send();
-        })
+        });
 
     };
 

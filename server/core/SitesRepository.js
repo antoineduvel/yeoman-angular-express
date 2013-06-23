@@ -25,7 +25,7 @@ var SitesRepository = function(dbUrl, collectionName) {
         Site = mongoose.model(collectionName, {
             lien: String,
             titre: String,
-            commentaire: String,
+            note: Number,
             enCours: Boolean,
             occurances: Number
         });
@@ -50,27 +50,14 @@ var SitesRepository = function(dbUrl, collectionName) {
      * @param {Function} callback - function to be called with error and success objects in param after the insert
      */
     var _insert = function(site, callback) {
-        _update(site.lien, {$inc: { occurances: 1 }}, function(numberAffected) {
-            if (numberAffected > 0) {
-                console.log("site mis à jour !");
-                _find({lien : site.lien}, null, null, function(sites) {
-                    if (null != sites && sites.length > 0) {
-                        callback(sites[0]);
-                    }
-                })
-            } else {
-                console.log("création du site");
+        console.log("création du site");
 
-                var newDBSite = new Site(site);
+        var newDBSite = new Site(site);
 
-                newDBSite.save(function (err) {
-                    if (err) // ...
-                        console.log('erreur ...');
-
-                    callback(newDBSite);
-                });
-            }
-        })
+        newDBSite.save(function (err) {
+            if (err) console.log('erreur ...');
+            callback(newDBSite);
+        });
     };
 
     /**
@@ -115,6 +102,7 @@ var SitesRepository = function(dbUrl, collectionName) {
      * @param {Function} callback - function to be called with error and data objects in param after the delete
      */
     var _delete = function(site, callback) {
+        console.log("sitesRepository.delete");
         Site.remove({lien: site.lien}, function (err, numberAffected, raw) {
             if (err) {
                 console.log(err);
@@ -124,6 +112,7 @@ var SitesRepository = function(dbUrl, collectionName) {
             }
             callback();
         });
+        console.log("sitesRepository.delete - end");
     };
 
 

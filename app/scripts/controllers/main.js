@@ -1,11 +1,13 @@
 'use strict';
 
-angular.module('yoaeApp')
+var yoaeApp = angular.module('yoaeApp')
     .controller('MainCtrl', function ($scope, $timeout, $http) {
 
         // valeur initiale des tris
         $scope.tri = 'occurances';
         $scope.reverse = 'true';
+
+        $scope.site = {lien: "", note: 3};
 
         var getFromServer = function () {
             $http.get('/sites').success(function (resp) {
@@ -18,8 +20,6 @@ angular.module('yoaeApp')
                         break;
                     }
                 }
-
-
             });
         };
 
@@ -29,7 +29,7 @@ angular.module('yoaeApp')
             $http.post('/create', site).success(function () {
                 getFromServer();
                 $scope.site.lien = "";
-                $scope.site.commentaire = "";
+                $scope.site.note = "3";
             });
         }
 

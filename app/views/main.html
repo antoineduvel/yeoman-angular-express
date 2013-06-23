@@ -10,24 +10,24 @@
         <form name="siteForm">
             Lien web : <input type="text" ng-model="site.lien" ng-pattern="/^(www.)?(([a-z0-9-]){2,}\.){1,4}([a-z]){2,6}$/" autofocus required/>
             <br/>
-            Commentaire : <input type="text" ng-model="site.commentaire" />
+            Note (de 1 à 5) : <input type="text" ng-model="site.note" ng-pattern="/^([1-5]){1}$/" required />
             <br/>
             <button class="btn btn-success" ng-click="submitSite(site)" ng-disabled="siteForm.$invalid">envoyer</button>
         </form>
     </div>
     <table width="100%" class='border-radius-table' id='border-radius'>
         <tr>
-            <th ng-click="tri = 'lien'; reverse = !reverse">lien</th>
-            <th>titre</th>
-            <th>commentaire</th>
-            <th ng-click="tri = 'occurances'; reverse = !reverse">occurances</th>
+            <th ng-click="tri = 'lien'; reverse = !reverse">Lien</th>
+            <th>Titre</th>
+            <th ng-click="tri = 'note'; reverse = !reverse">Note</th>
+            <th ng-click="tri = 'occurances'; reverse = !reverse">Occurances</th>
             <th></th>
         </tr>
         <tr ng-repeat="site in sitesFromServer | orderBy:tri:reverse">
             <td>{{site.lien}}</td>
             <td ng-hide="!site.enCours">... En Cours ...</td>
             <td ng-hide="site.enCours">{{site.titre}}</td>
-            <td>{{site.commentaire}}</td>
+            <td>{{site.note | stars}}</td>
             <td>{{site.occurances}}</td>
             <td><button class="btn btn-danger" ng-click="deleteSite(site)"><i class="icon-trash icon-white">X</i></button></td>
         </tr>
