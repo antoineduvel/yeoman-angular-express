@@ -2,6 +2,7 @@
     "name": "yeoman-angular-express",
     "version": "0.0.0",
     "dependencies": {
+        "bower": "0.6.x",
         "express": "~3.0.0",
         "ejs": "~0.8.4",
         "htmlparser2": "latest",
@@ -29,8 +30,7 @@
         "grunt-open": "~0.2.0",
         "matchdep": "~0.1.2",
         "grunt-google-cdn": "~0.1.2",
-        "grunt-ngmin": "~0.0.2",
-        "bower": "0.6.x"
+        "grunt-ngmin": "~0.0.2"
     },
     "engines": {
         "node": ">=0.8.0"
