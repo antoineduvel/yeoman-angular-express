@@ -2,7 +2,7 @@
     "name": "yeoman-angular-express",
     "version": "0.0.0",
     "dependencies": {
-        "bower": "0.6.x",
+        "bower": "latest",
         "express": "~3.0.0",
         "ejs": "~0.8.4",
         "htmlparser2": "latest",
