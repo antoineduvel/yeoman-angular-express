@@ -4,7 +4,7 @@
  * Routes of the API
  * @class SiteRoutes
  * @constructor
- * @param {} TODO : Repo - the repo
+ * @param {}
  * @module routes
  */
 var SiteRoutes = function () {

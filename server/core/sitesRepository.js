@@ -20,15 +20,20 @@ var SitesRepository = function(dbUrl, collectionName) {
      */
     var _connect = function() {
         console.log('Opening db connection : %s', dbUrl);
-        mongoose.connect(dbUrl);
-
-        Site = mongoose.model(collectionName, {
-            lien: String,
-            titre: String,
-            note: Number,
-            enCours: Boolean,
-            occurances: Number
+        mongoose.connect(dbUrl, function(err) {
+            if (err) {
+                console.error("erreur lors de la connection à " + dbUrl);
+            } else {
+                Site = mongoose.model(collectionName, {
+                    lien: String,
+                    titre: String,
+                    note: Number,
+                    enCours: Boolean,
+                    occurances: Number
+                });
+            }
         });
+
 
     };
 
