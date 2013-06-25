@@ -31,14 +31,14 @@ admin collections : use console admin : mongo
 - db.sites.remove({"lien" : "leLienASupprimer"})
 - db.sites.drop()
 
-# Heroku - using an external mongolab account to avoid having to share my credit card information with heroku (needed for addons)
+# Heroku - using an external mongolab account
 Here are some usefull commands :
 - heroku login
 - heroku create
 - heroku keys:clear
 - ssh-keygen -t rsa
 - heroku keys:add "id_rsa.pub"
-- heroku config:set NODE_ENV=development DB_URL=ds029778.mongolab.com:29778 DB_USER=<mongolab_user> DB_PASSWD=<mongolab_passwd>
+- heroku config:set NODE_ENV=development DB_URL=\<mongolab_url:mongolab_port\> DB_USER=\<mongolab_user\> DB_PASSWD=\<mongolab_passwd\>
 - git push heroku master
 - heroku help logs --tail
 
