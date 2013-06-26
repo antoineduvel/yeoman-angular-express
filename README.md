@@ -42,3 +42,5 @@ Here are some usefull commands :
 - git push heroku master
 - heroku help logs --tail
 
+If it's up and running (?) : http://yeoman-angular-express.herokuapp.com/
+
