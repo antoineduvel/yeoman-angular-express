@@ -1,4 +1,5 @@
 'use strict';
+
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
     return connect.static(require('path').resolve(dir));
@@ -298,7 +299,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
 //        'jshint',
-//        'test',
+        'test',
         'coffee',
         'compass:dist',
         'useminPrepare',

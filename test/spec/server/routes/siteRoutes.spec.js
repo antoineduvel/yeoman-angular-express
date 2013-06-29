@@ -1,7 +1,5 @@
 var SiteRoutes = require('../../../../server/routes/siteRoutes');
 
-var routes
-
 describe("siteRoutes", function() {
 
     var req = new Object(),
@@ -9,9 +7,11 @@ describe("siteRoutes", function() {
 
     req.body = new Object();
     req.body.lien = "www.angularjs.fr";
+    req.body.tags = [{name: "javascript"}];
     req.body.note = 3;
 
     var sites;
+    var routes = new SiteRoutes();
 
     res.status = function(string) {
         console.log("____________________");
@@ -30,17 +30,17 @@ describe("siteRoutes", function() {
     };
 
     beforeEach(function() {
-        routes = new SiteRoutes();
-
-        console.log("delete");
-        routes.delete(req, res);
+        waits(1000);
     });
 
     it("creates site", function() {
-        console.log("create");
+        console.log("spec : delete");
+        routes.delete(req, res);
+
+        console.log("spec : create");
         routes.create(req, res);
 
-        console.log("getSite");
+        console.log("spec : getSite");
 
         routes.getSites(req, res);
     });
