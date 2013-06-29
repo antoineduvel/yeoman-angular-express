@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+
+/*global yoaeApp */
 
 yoaeApp.filter('stars', function () {
 
@@ -8,9 +10,9 @@ yoaeApp.filter('stars', function () {
         3: '\u2605\u2605\u2605',
         4: '\u2605\u2605\u2605\u2605',
         5: '\u2605\u2605\u2605\u2605\u2605'
-    };
+      };
 
     return function(startCount) {
         return STARS[Math.round(startCount)];
-    };
-});
+      };
+  });

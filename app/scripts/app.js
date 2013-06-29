@@ -10,4 +10,4 @@ angular.module('yoaeApp', [])
             .otherwise({
                 redirectTo: '/'
             });
-    });
+        });

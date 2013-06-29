@@ -15,9 +15,14 @@ var SiteRoutes = function () {
 
     var SitesRepository = require('../core/sitesRepository')
 
-    var connexionString = process.env.DB_USER + ':' + process.env.DB_PASSWD + '@' + process.env.DB_URL + '/yeoman-angular-express-db';
+    var connexionString
+    if (null != process.env.DB_USER && null != process.env.DB_PASSWD) {
+        connexionString = process.env.DB_USER + ':' + process.env.DB_PASSWD + '@' + process.env.DB_URL + '/yeoman-angular-express-db';
+    } else {
+        connexionString = process.env.DB_URL + '/yeoman-angular-express-db';
+    }
 
-    var sitesRepository = new SitesRepository('mongodb://yo:yo@ds029778.mongolab.com:29778/yeoman-angular-express-db', 'sites');
+    var sitesRepository = new SitesRepository('mongodb://' + connexionString, 'sites');
 //    var sitesRepository = new SitesRepository('mongodb://localhost:27017/test', 'sites');       ds029778.mongolab.com:29778/yeoman-angular-express-db
     sitesRepository.connect();
 

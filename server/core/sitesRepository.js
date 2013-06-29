@@ -1,4 +1,5 @@
 'use strict';
+/*global console*/
 
 /**
  * Repository pattern to CRUD sites.
@@ -6,21 +7,20 @@
  * @constructor
  * @module core
  */
-
-
 var SitesRepository = function(dbUrl, collectionName) {
 
     var mongoose = require('mongoose');
 
     var Site
+    var Tag
 
     /**
      * Connect to the db.
      * @param callback {object} - the called function once connected
      */
-    var _connect = function() {
+    var _connect = function () {
         console.log('Opening db connection : %s', dbUrl);
-        mongoose.connect(dbUrl, function(err) {
+        mongoose.connect(dbUrl, function (err) {
             if (err) {
                 console.error("erreur lors de la connection à " + dbUrl);
             } else {
@@ -28,9 +28,14 @@ var SitesRepository = function(dbUrl, collectionName) {
                     lien: String,
                     titre: String,
                     note: Number,
+                    tags: [{ name: String}],
                     enCours: Boolean,
                     occurances: Number
                 });
+                Tag = mongoose.model('tag' + collectionName, {
+                    name: String
+                });
+                console.log("connection à %s initialisée", dbUrl);
             }
         });
 
@@ -40,10 +45,12 @@ var SitesRepository = function(dbUrl, collectionName) {
     /**
      * Close the connection
      */
-    var _close = function() {
+    var _close = function () {
         console.log('Closing db connection...');
         mongoose.disconnect(function(err, result) {
-            if (err) throw err;
+            if (err) {
+                throw err;
+            }
             console.log('Done');
         });
     };
@@ -51,19 +58,52 @@ var SitesRepository = function(dbUrl, collectionName) {
     /**
      * Insert a site
      * @method insert
-     * @param {Object} site - the geek to insert, not checked against a particular schema
+     * @param {Object} site - the site to insert, not checked against a particular schema
      * @param {Function} callback - function to be called with error and success objects in param after the insert
      */
-    var _insert = function(site, callback) {
+    var _insert = function (site, callback) {
         console.log("création du site");
 
         var newDBSite = new Site(site);
 
         newDBSite.save(function (err) {
-            if (err) console.log('erreur ...');
+            if (err) {
+                console.log('erreur ...');
+            }
             callback(newDBSite);
         });
+
+        _insertTags(site, function (tag) {
+            console.log("insertion du tag : " + tag.name);
+        });
     };
+
+    /**
+     * Insert tags from a site
+     * @method insert
+     * @param {Object} site - the site to insert, not checked against a particular schema
+     * @param {Function} callback - function to be called with error and success objects in param after the insert
+     */
+    var _insertTags = function(site, callback) {
+        console.log("création des tags site");
+
+        if (null != site.tags) {
+            for (var i=0 ; i<site.tags.length ; i++) {
+                var newDBTag = new Tag(site.tags[i]);
+                console.log(newDBTag);
+                _findTag(site.tags[i], null, null, function(tags){
+                    if (null == tags || 0 == tags.length) {
+                        newDBTag.save(function (err) {
+                            if (err) console.log("erreur ...");
+                            callback(newDBTag);
+                        });
+                    }
+                });
+            }
+        }
+
+    };
+
 
     /**
      * Find a site
@@ -74,8 +114,22 @@ var SitesRepository = function(dbUrl, collectionName) {
     var _find = function(query, limit, skip, callback) {
         Site.find(query, function (err, sites) {
             if (err) // TODO handle err
-                console.log(sites)
+                console.log(sites);
             callback(sites);
+        })
+    };
+
+    /**
+     * Find a tag
+     * @method find
+     * @param {Object} query - query to search against
+     * @param {Function} callback - function to be called with error and data objects in param after the find
+     */
+    var _findTag = function(query, limit, skip, callback) {
+        Tag.find(query, function (err, tags) {
+            if (err) // TODO handle err
+                console.log(tags);
+            callback(tags);
         })
     };
 
